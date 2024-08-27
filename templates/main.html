@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="/templates/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/download">Скачать файл</a>
+        <h1>ASCII Art Generator</h1>
+        <form action="/ascii-art" method="post">
+            <label for="text-input">Text:</label><br>
+            <input type="text" id="text-input" name="text"><br>
+            <input type="radio" id="standard" name="banner" value="standard" checked>
+            <label for="standard">Standard</label><br>
+            <input type="radio" id="shadow" name="banner" value="shadow">
+            <label for="shadow">Shadow</label><br>
+            <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+            <label for="thinkertoy">Thinkertoy</label><br>
+            <button type="submit">Generate ASCII Art</button>
+        </form>
+        <h2>ASCII Art output</h2>
+        <pre>{{.}}</pre>
+    </div>
+</body>
+</html>
